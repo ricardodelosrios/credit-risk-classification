@@ -1,69 +1,68 @@
-# credit-risk-classification
+# credit-risk-classification 📊🤖
 
-<div style="display: inline_block"><br/>
-  <img align="center" alt="python" src="http://ForTheBadge.com/images/badges/made-with-python.svg" />
+<div align="center">
 
-<div style="display: inline_block"><br/>
-  <img align="center" alt="jupyter" src="https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter" />
+  <img alt="python" src="http://ForTheBadge.com/images/badges/made-with-python.svg" />
 
-## Introduction
+  <img alt="jupyter" src="https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter" />
 
-This data science challenge will use machine learning techniques to investigate the field of credit risk analysis. The main goal is to create and assess a model that, using past loan data from a peer-to-peer lending services provider, can reliably determine borrowers' creditworthiness. By using this research to guide decision-making, the organization will be able to minimize default risk and optimize the health of its lending portfolio.
+</div>
 
-A logistic regression model with oversampling is used in this project to account for class imbalance and produce accurate predictions.
+## Introduction 🚀
 
-## Libraries
+Welcome to the Credit Risk Classification project! 📈 In this data science challenge, we dive into the fascinating world of credit risk analysis using powerful machine learning techniques.
 
-The following Python libraries are needed by the project to complete its tasks:
+The main goal? Develop a robust model that can accurately determine the creditworthiness of borrowers, leveraging past loan data from a peer-to-peer lending services provider. 🌐 By making data-driven decisions, we aim to minimize default risk and optimize the overall health of our lending portfolio.
 
-- `Pandas` and `numpy`: These libraries are necessary for working with data. They enable us to access, modify, and examine the loan information.
+## Libraries 📚
 
-- `pathlib`: The `pathlib` library facilitates file path manipulation. It's employed to indicate the dataset's location.
+To make the magic happen, we rely on these fantastic Python libraries:
 
-- `sklearn.metrics`: This library offers metrics to assess the machine learning model's performance. We utilize it to produce confusion matrices, classification reports, and the balanced accuracy score.
+- `Pandas` and `numpy`: Your data manipulation wizards. 🧙‍♂️
+  
+- `pathlib`: The guide to finding the treasure (your dataset). 🗺️
 
-The `sklearn.model_selection` package is utilized to divide the data into sets for testing and training. In order to evaluate the model's generalization performance, it makes sure that it is tested on data that it has never seen before.
+- `sklearn.metrics` and `sklearn.model_selection`: The superheroes behind model evaluation and data splitting. 🦸‍♂️🦸‍♀️
 
-The `sklearn.linear_model` module is utilized to construct a Logistic Regression model.
+- `sklearn.linear_model`: Crafting the Logistic Regression magic. 🎩✨
 
-## How the Code Works
+## How the Code Works 💻
 
-The project performs the following detailed steps:
+Let's break it down into actionable steps:
 
-1. **Data Loading:** The project begins by reading a CSV file named `lending_data.csv` from the 'Resources' folder into a Pandas DataFrame. This dataset contains information about loan applicants and their loan status.
+1. **Data Loading:** 📥 We start by summoning the data from the sacred `lending_data.csv` within the 'Resources' folder into a Pandas DataFrame.
 
-2. **Data Splitting:** After loading the data, it's split into two main components:
-   - The labels (y): This represents the 'loan_status' column, which is what we aim to predict.
-   - The features (X): This includes all other columns except 'loan_status'.
+2. **Data Splitting:** 🎭 Separating the heroes (features) from the hero's quest (labels).
 
-3. **Class Imbalance Check:** The project checks the balance of the target values (loan_status) to determine whether class imbalance exists.
+3. **Class Imbalance Check:** ⚖️ A quick check to ensure balance in the force (target values).
 
-4. **Data Splitting for Modeling:** The data is divided into training and testing sets using the `train_test_split` function from `sklearn.model_selection`. This ensures that the model is trained on one subset of the data and tested on another.
+4. **Data Splitting for Modeling:** 🧠 Dividing the army for training and testing, ensuring the model is battle-ready.
 
-5. **Model Training:** A Logistic Regression model is instantiated and trained using the training data. The `LogisticRegression` model is configured with a `max_iter` parameter and a `random_state` parameter to control the randomness.
+5. **Model Training:** 🚀 The Logistic Regression model trains for the epic battle ahead.
 
-6. **Model Prediction:** The trained model makes predictions on the testing data, and the results are stored in a DataFrame, which is then displayed. This step helps evaluate how well the model performs.
+6. **Model Prediction:** 🔮 Predictions unfold as the model reveals its insights.
 
-7. **Model Evaluation:** The project calculates the balanced accuracy score for the model and displays it. The balanced accuracy score takes class imbalance into account.
+7. **Model Evaluation:** 📊 Metrics like balanced accuracy score showcase the model's triumphs.
 
-8. **Confusion Matrix:** A confusion matrix is generated to provide a detailed breakdown of model performance. The confusion matrix helps visualize true positives, true negatives, false positives, and false negatives.
+8. **Confusion Matrix:** 🤔 A map of victories and defeats, guiding us through the battlefield.
 
-9. **Classification Report:** The classification report is printed, offering a more comprehensive evaluation of the model's performance, including precision, recall, and F1-score for each class.
+9. **Classification Report:** 📋 A detailed report on the heroes' individual performances.
 
-10. **Class Imbalance Mitigation:** To address class imbalance, the project uses the Random OverSampler from the `imbalanced-learn` library. The resampled training data is used to retrain the Logistic Regression model.
+10. **Class Imbalance Mitigation:** ⚔️ Enter the Random OverSampler to balance the odds.
 
-11. **Model Evaluation with Oversampling:** The project calculates the balanced accuracy score for the model trained on the resampled data and displays it.
+11. **Model Evaluation with Oversampling:** 🌪️ New metrics emerge as the oversampled model is put to the test.
 
-12. **Confusion Matrix with Oversampling:** A confusion matrix is generated for the model with oversampling to provide a detailed performance breakdown.
+12. **Confusion Matrix with Oversampling:** 🔍 An intensified look into victories and defeats post-oversampling.
 
-13. **Classification Report with Oversampling:** The classification report is printed for the model with oversampling, offering a comprehensive evaluation of its performance.
+13. **Classification Report with Oversampling:** 📈 A comprehensive report on the performance evolution.
 
-## Conclusion
+## Conclusion 🏁
 
-With 100% precision, 99% accuracy, and 99% recall, this model performs very well in predicting healthy loans `0`; however, it performs somewhat worse when predicting high-risk loans `1`. With 102 false positives in this sample and an accuracy score of just 85%, it appears to be relatively prone to false positives in certain situations. At 91%, the recall score is also somewhat lower than for healthy loans, where the algorithm also discovered 56 erroneous negatives.
+In the grand finale, our models shine! 💫 With precision, accuracy, and recall as our allies, we navigate the financial landscape. Yet, be wary of false positives; they may lurk in the shadows. 🦸‍♂️🦸‍♀️
 
-The second model now has considerably improved metrics with high-risk loans and performs as well with healthy loans as the original model did. The balanced accuracy score has improved generally from 95% to 99%, with the recall rising most noticeably from 91% to 99%. since a result, the accuracy dropped somewhat, from 85% to 84%, since our model in the test sample produced more false positives than our first model did. It discovered considerably fewer false negatives, which is partially expected when oversampling, but it is most likely the result of overfitting the minority class.
-
-## Developer
+## Developer 👨‍💻
 
 [<img src="https://avatars.githubusercontent.com/u/133066908?v=4" width=115><br><sub>Ricardo De Los Rios</sub>](https://github.com/ricardodelosrios) 
+
+
+
